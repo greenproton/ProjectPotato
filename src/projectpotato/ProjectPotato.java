@@ -17,6 +17,9 @@ public class ProjectPotato {
         InputManager inputManager = new InputManager();
         inputManager.displayInstructions();
         inputManager.scanner();
+        Fraction answer = inputManager.getAnswer();
+        OutputManager outputManager = new OutputManager();
+        outputManager.output(answer);
 
         
     }

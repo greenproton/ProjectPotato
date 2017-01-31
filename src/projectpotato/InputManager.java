@@ -15,6 +15,8 @@ public class InputManager {
     
     private final Scanner scanner = new Scanner(System.in);
     
+    private Fraction answer;
+    
     /**
      * The input manager needs to scan in the input and parse the data into
      * fractions.
@@ -46,15 +48,18 @@ public class InputManager {
         userInput = scanner.nextLine();
         Fraction f2 = this.parse(userInput);
         
-        Fraction f3 = FractionMath.add(f1, f2);
+        answer = FractionMath.add(f1, f2);
         
-        System.out.println(f3);
 
         
         
         
     }
     
+    public Fraction getAnswer() {
+        return answer;
+    }
+     
     private Fraction parse(String userInput) {
         
         String[] numbersAsStrings = userInput.split("/");
